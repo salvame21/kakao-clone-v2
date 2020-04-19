@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <title>Chat | Kakao Clone</title>
+  </head>
+  <body>
+    <div class="status-bar"></div>
+    <div class="status-bar__column">
+      <span class="status-bar__clock">13:54</span>
+    </div>
+    <div class="status-bar__column"></div>
+    <i class="fas fa-clock"></i>
+    <i class="fas fa-volume-mute"></i>
+    <i class="fas fa-wifi"></i>
+    <i class="fas fa-battery-full"></i>
+    <span class="status-bar__battery-level">100%</span>
+    <!-- i.fas.fa-volume-mute -->
+    <header class="header">
+      <div class="header__header-column">
+        <!-- <div class="header__back-btn"> 굳이 필요 없어서 다시 삭제함 -->
+        <a href="index.html" class="header__back-btn">
+          <i class="fas fa-arrow-left fa-2x"> </i
+        ></a>
+        <!-- </div> 굳이 필요 없어서 다시 삭제함 -->
+        <h1 class="header__title">Best Friend</h1>
+        <!-- 정창곤입니다. 대신 Best Friend 쓴듯 -->
+      </div>
+      <div class="header__header-column">
+        <span class="header__icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <div class="header__icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <!-- bars는 span 안쓰고 왜 div로 했지?? 니콜라스가 실수한건가 일단 div로 ㄱㄱ-->
+      </div>
+      <!-- .header__header-column -->
+    </header>
+    <main class="chat">
+      <ul class="chat__messages">
+        <span class="chat__timestap">Friday, January 11, 2019</span>
+        <li class="incoming-message" message>
+          <img src="images/avatar.jpg" class="g-avatar message__avatar" />
+          <div class="message_content">
+            <span class="message__author">Best Friend</span>
+            <div class="message__buble">Congrats I love you!</div>
+          </div>
+          <span class="message_timestap"></span>
+        </li>
+        <li class="incoming-message" message>
+          <span class="message_timestap"></span>
+          <div class="message_content">
+            <div class="message__buble">Thank you see you soon!</div>
+          </div>
+        </li>
+        <!-- class 2번째 message 넣은것은 이것도 메세지의 일부인데 공유하는 무언가가 있기 때문임(텍스트 스타일, 패딩, timestamp 같은 것들 | css 할떄 자세히 이해되겠지....) -->
+      </ul>
+    </main>
+    <div class="chat__write">
+      <div class="chat__write-column">
+        <i class="far fa-plus-square"></i>
+      </div>
+      <div class="chat__write-column">
+        <input
+          type="text"
+          placeholder="Send message"
+          class="chat__write-input"
+        />
+        <!-- testarea 대신 input 사용, textarea는 좀 더 칸이 클때 사용하는 느낌? -->
+      </div>
+      <div class="chat__write-column">
+        <span class="chat__write-icon"> <i class="far fa-smile-wink"></i> </span
+        ><span class="chat__write-icon">
+          <i class="fas fa-microphone"></i>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    <title>Find | Kakao Clone</title>
+  </head>
+  <body>
+    <div class="status-bar"></div>
+    <div class="status-bar__column">
+      <span class="status-bar__clock">13:54</span>
+    </div>
+    <div class="status-bar__column"></div>
+    <i class="fas fa-clock"></i>
+    <i class="fas fa-volume-mute"></i>
+    <i class="fas fa-wifi"></i>
+    <i class="fas fa-battery-full"></i>
+    <span class="status-bar__battery-level">100%</span>
+    <!-- i.fas.fa-volume-mute -->
+    <header class="header">
+      <div class="header__header-column">
+        <h1 class="header__title">Find</h1>
+      </div>
+      <div class="header__header-column">
+        <span class="header__icon">
+          <i class="fas fa-search"></i>
+        </span>
+        <span class="header__icon">
+          <i class="fas fa-cog"></i>
+          <!-- <i class="fas fa-cog fa-5x"></i> -->
+        </span>
+      </div>
+      <!-- .header__header-column -->
+    </header>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <main class="find">
+      <header class="find__header">
+        <ul class="find__header-list">
+          <li class="find__header-btn header-btn">
+            <span class="header-btn__icon">
+              <i class="fas fa-qrcode fa-2x"></i>
+            </span>
+            <span class="header-btn__title">QR Code</span>
+          </li>
+          <li class="find__header-btn header-btn">
+            <span class="header-btn__icon">
+              <i class="fas fa-user-plus fa-2x"></i>
+            </span>
+            <span class="header-btn__title">Add by contacts</span>
+          </li>
+          <li class="find__header-btn header-btn">
+            <span class="header-btn__icon">
+              <i class="fas fa-passport fa-2x"></i>
+            </span>
+            <span class="header-btn__title">Add by ID</span>
+          </li>
+          <li class="find__header-btn header-btn">
+            <span class="header-btn__icon">
+              <i class="far fa-envelope fa-2x"></i>
+            </span>
+            <span class="header-btn__title">Invite</span>
+          </li>
+        </ul>
+        <!-- Remember that I always put the name of the root element and then the name of the children.
+
+.find_header-btn is as a child of .find__header-list
+
+But because find__header-btn is gonna have elements inside I add the header-btn class so I can write .header-btn__icon instead of:
+
+find__header-btn__icon 
+
+Do you see how long that class is? Not good! If it add .header-btn than I can do .header-btn__icon (<li class="find__header-btn header-btn"> class 2개 왜 쓰는지에 대한 니콜라스 답변)-->
+      </header>
+    </main>
+    <ul class="find__recommended">
+      <h5 class="find__title">
+        Recommended Friends
+      </h5>
+      <li class="find__friend friend friend--lg">
+        <div class="friend__column">
+          <img src="images/avatar.jpg" class="g-avatar friend__avatar" />
+          <!--img.g-avatar.friend__avatar -->
+          <div class="friend__content">
+            <span class="friend__name">
+              Nicolas Serrano
+            </span>
+          </div>
+        </div>
+        <div class="friend__column">
+          <div class="friend__addi-btn">
+            <i class="fas fa-user-plus"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="friends.html" class="">
+            <i class="far fa-user"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="index.html" class="">
+            <i class="far fa-comment"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="find.html" class="">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+        <li class="nav__list-item">
+          <a href="more.html" class="">
+            <i class="fas fa-ellipsis-h"></i>
+          </a>
+        </li>
+        <!-- li.nav__list-item*4>a.nav_list-link -->
+      </ul>
+    </nav>
+  </body>
+</html>
