@@ -9,23 +9,28 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Chats | Kakao Clone</title>
   </head>
   <body>
-    <div class="status-bar"></div> 
-    <!-- 첫줄 div는 왜 있는거지? 여백용인가?? -->
-    <div class="status-bar__column">
-      <span class="status-bar__clock">13:54</span>
+    <div class="status-bar">
+      <!-- 첫줄 div는 왜 있는거지? 여백용인가?? 
+    역시!! 뒤로 가는게 맞네-->
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <!--  -->
+      <div class="status-bar__column">
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <span class="status-bar__battery-level">100%</span>
+        <i class="fas fa-battery-full"></i>
+        <!-- i.fas.fa-volume-mute -->
+        <!--  -->
+      </div>
     </div>
-    <!--  -->
-    <div class="status-bar__column"></div>
-    <i class="fas fa-clock"></i>
-    <i class="fas fa-volume-mute"></i>
-    <i class="fas fa-wifi"></i>
-    <span class="status-bar__battery-level">100%</span>
-    <i class="fas fa-battery-full"></i>
-    <!-- i.fas.fa-volume-mute -->
-    <!--  -->
     <header class="header">
       <div class="header__header-column">
         <h1 class="header__title">Chats</h1>
@@ -48,19 +53,24 @@
       <ul class="chats__list">
         <li class="chats__chat chat">
           <a href="chat.html">
-          <div class="chat__column">
-              <img class="chat_avatar g-avatar" src="images/avatar.jpg"></img>
-              
-            <div class="chat__content">
-                <span class="chat__username">Lynn</span>
-                <span class="chat__preview">Going home</span>
+            <div class="chats__chat friend friend--lg">
+              <div class="friend__column">
+                <img src="images/avatar.jpg" class="m-avatar friend__avatar" />
+                <!--img.g-avatar.friend__avatar -->
+                <div class="friend__content">
+                  <span class="friend__name">
+                    Lynn
+                  </span>
+                  <span class="friend__bottom-text">
+                    Going home!
+                  </span>
+                </div>
+              </div>
+              <div class="friend__column">
+                <span class="chat__timestamp">March 8</span>
+              </div>
             </div>
-          </div>
-          <div class="chat__column">
-            <span class="chat__timestamp">Yesterday</span>
-          </div>
-        </a>
-
+          </a>
         </li>
         <!-- li.chats__chat -->
       </ul>
@@ -68,22 +78,25 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__list-item">
-          <a href="friends.html" class="">
+          <a href="friends.html" class="nav__list-link">
             <i class="far fa-user"></i>
           </a>
         </li>
         <li class="nav__list-item">
-          <a href="index.html" class="">
+          <a href="index.html" class="nav__list-link">
+            <div class="nav__badge">8</div>
+            <!-- badge "8"을 span 대신 div로 쓴 이유 니콜라스 답변 :
+            It can also be a span, I made it a div because I needed a box to make it a circle and change the background color. -->
             <i class="fas fa-comment"></i>
           </a>
         </li>
         <li class="nav__list-item">
-          <a href="find.html" class="">
+          <a href="find.html" class="nav__list-link">
             <i class="fas fa-search"></i>
           </a>
         </li>
         <li class="nav__list-item">
-          <a href="more.html" class="">
+          <a href="more.html" class="nav__list-link">
             <i class="fas fa-ellipsis-h"></i>
           </a>
         </li>

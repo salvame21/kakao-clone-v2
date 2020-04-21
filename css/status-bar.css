@@ -1,0 +1,22 @@
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.status-bar i {
+  font-size: 14px;
+}
+
+.status-bar .status-bar__battery-level {
+  margin-left: 5px;
+}
+/* .status-bar__battery-level {
+    margin-left: 5px;
+  } 
+  이렇게만 작성해도 문제없음
+  다만 니콜라스는 참고로 적어주는 듯
+  I just like to write .father .child {}
+  */

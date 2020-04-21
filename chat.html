@@ -9,25 +9,30 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Chat | Kakao Clone</title>
   </head>
   <body>
-    <div class="status-bar"></div>
-    <div class="status-bar__column">
-      <span class="status-bar__clock">13:54</span>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <span class="status-bar__battery-level">100%</span>
+        <i class="fas fa-battery-full"></i>
+      </div>
     </div>
-    <div class="status-bar__column"></div>
-    <i class="fas fa-clock"></i>
-    <i class="fas fa-volume-mute"></i>
-    <i class="fas fa-wifi"></i>
-    <i class="fas fa-battery-full"></i>
-    <span class="status-bar__battery-level">100%</span>
+
     <!-- i.fas.fa-volume-mute -->
     <header class="header">
       <div class="header__header-column">
         <!-- <div class="header__back-btn"> 굳이 필요 없어서 다시 삭제함 -->
         <a href="index.html" class="header__back-btn">
-          <i class="fas fa-arrow-left fa-2x"> </i
+          <i class="fas fa-arrow-left"> </i
         ></a>
         <!-- </div> 굳이 필요 없어서 다시 삭제함 -->
         <h1 class="header__title">Best Friend</h1>
@@ -37,10 +42,12 @@
         <span class="header__icon">
           <i class="fas fa-search"></i>
         </span>
-        <div class="header__icon">
+        <span class="header__icon">
           <i class="fas fa-bars"></i>
-        </div>
-        <!-- bars는 span 안쓰고 왜 div로 했지?? 니콜라스가 실수한건가 일단 div로 ㄱㄱ-->
+        </span>
+        <!-- bars는 span 안쓰고 왜 div로 했지?? 니콜라스가 실수한건가 일단 div로 ㄱㄱ
+        역시!! span이 맞았군 니콜 실수임
+      span은 inline이지 div는 box고-->
       </div>
       <!-- .header__header-column -->
     </header>
@@ -48,7 +55,9 @@
       <ul class="chat__messages">
         <span class="chat__timestap">Friday, January 11, 2019</span>
         <li class="incoming-message" message>
-          <img src="images/avatar.jpg" class="g-avatar message__avatar" />
+          <!-- <div class="message column"> -->
+          <!-- (이전에는 li 다음에 div 써서 column 나눴었음. 근데 이건 안나눔. 니콜라스 별 상관 없다함) -->
+          <img src="images/avatar.jpg" class="m-avatar message__avatar" />
           <div class="message_content">
             <span class="message__author">Best Friend</span>
             <div class="message__buble">Congrats I love you!</div>
@@ -60,6 +69,7 @@
           <div class="message_content">
             <div class="message__buble">Thank you see you soon!</div>
           </div>
+          <!-- </div> -->
         </li>
         <!-- class 2번째 message 넣은것은 이것도 메세지의 일부인데 공유하는 무언가가 있기 때문임(텍스트 스타일, 패딩, timestamp 같은 것들 | css 할떄 자세히 이해되겠지....) -->
       </ul>

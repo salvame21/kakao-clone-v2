@@ -9,25 +9,29 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Settings | Kakao Clone</title>
   </head>
   <body>
-    <div class="status-bar"></div>
-    <div class="status-bar__column">
-      <span class="status-bar__clock">13:54</span>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span class="status-bar__clock">13:54</span>
+      </div>
+      <div class="status-bar__column">
+        <i class="fas fa-clock"></i>
+        <i class="fas fa-volume-mute"></i>
+        <i class="fas fa-wifi"></i>
+        <span class="status-bar__battery-level">100%</span>
+        <i class="fas fa-battery-full"></i>
+      </div>
     </div>
-    <div class="status-bar__column"></div>
-    <i class="fas fa-clock"></i>
-    <i class="fas fa-volume-mute"></i>
-    <i class="fas fa-wifi"></i>
-    <i class="fas fa-battery-full"></i>
-    <span class="status-bar__battery-level">100%</span>
     <!-- i.fas.fa-volume-mute -->
     <header class="header">
       <div class="header__header-column">
         <!-- <div class="header__back-btn"> 굳이 필요 없어서 다시 삭제함 -->
         <a href="more.html" class="header__back-btn">
-          <i class="fas fa-arrow-left fa-2x"> </i
+          <i class="fas fa-arrow-left"> </i
         ></a>
         <!-- </div> 굳이 필요 없어서 다시 삭제함 -->
         <h1 class="header__title">Settings</h1>
