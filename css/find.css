@@ -15,6 +15,7 @@
 /* flog 게임 한번 더 하자... */
 
 .find .header-btn__title {
+  display: block;
   margin-top: 20px;
   font-size: 14px;
 }

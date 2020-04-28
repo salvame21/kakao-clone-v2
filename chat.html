@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -13,85 +14,110 @@
 
     <title>Chat | Kakao Clone</title>
   </head>
-  <body>
-    <div class="status-bar">
-      <div class="status-bar__column">
-        <span class="status-bar__clock">13:54</span>
+  <body class="chats-body">
+    <div class="header-wrapper">
+      <div class="status-bar">
+        <div class="status-bar__column">
+          <span class="status-bar__clock">13:54</span>
+        </div>
+        <div class="status-bar__column">
+          <i class="fas fa-clock"></i>
+          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-wifi"></i>
+          <span class="status-bar__battery-level">100%</span>
+          <i class="fas fa-battery-full"></i>
+        </div>
       </div>
-      <div class="status-bar__column">
-        <i class="fas fa-clock"></i>
-        <i class="fas fa-volume-mute"></i>
-        <i class="fas fa-wifi"></i>
-        <span class="status-bar__battery-level">100%</span>
-        <i class="fas fa-battery-full"></i>
-      </div>
+      <header class="header">
+        <div class="header__header-column">
+          <!-- <div class="header__back-btn"> 굳이 필요 없어서 다시 삭제함 -->
+          <a href="index.html" class="header__back-btn">
+            <i class="fas fa-arrow-left"> </i
+          ></a>
+          <!-- </div> 굳이 필요 없어서 다시 삭제함 -->
+          <h1 class="header__title">Jeongsik Kim</h1>
+          <!-- 정창곤입니다. 대신 Best Friend 쓴듯 -->
+        </div>
+        <div class="header__header-column">
+          <span class="header__icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <span class="header__icon">
+            <i class="fas fa-bars"></i>
+          </span>
+          <!-- bars는 span 안쓰고 왜 div로 했지?? 니콜라스가 실수한건가 일단 div로 ㄱㄱ
+          역시!! span이 맞았군 니콜 실수임
+        span은 inline이지 div는 box고-->
+        </div>
+        <!-- .header__header-column -->
+      </header>
     </div>
 
     <!-- i.fas.fa-volume-mute -->
-    <header class="header">
-      <div class="header__header-column">
-        <!-- <div class="header__back-btn"> 굳이 필요 없어서 다시 삭제함 -->
-        <a href="index.html" class="header__back-btn">
-          <i class="fas fa-arrow-left"> </i
-        ></a>
-        <!-- </div> 굳이 필요 없어서 다시 삭제함 -->
-        <h1 class="header__title">Best Friend</h1>
-        <!-- 정창곤입니다. 대신 Best Friend 쓴듯 -->
-      </div>
-      <div class="header__header-column">
-        <span class="header__icon">
-          <i class="fas fa-search"></i>
-        </span>
-        <span class="header__icon">
-          <i class="fas fa-bars"></i>
-        </span>
-        <!-- bars는 span 안쓰고 왜 div로 했지?? 니콜라스가 실수한건가 일단 div로 ㄱㄱ
-        역시!! span이 맞았군 니콜 실수임
-      span은 inline이지 div는 box고-->
-      </div>
-      <!-- .header__header-column -->
-    </header>
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__messages">
-        <span class="chat__timestap">Friday, January 11, 2019</span>
-        <li class="incoming-message" message>
+        <span class="chat__timestamp">Friday, January 11, 2019</span>
+        <li class="incoming-message message">
           <!-- <div class="message column"> -->
           <!-- (이전에는 li 다음에 div 써서 column 나눴었음. 근데 이건 안나눔. 니콜라스 별 상관 없다함) -->
           <img src="images/avatar.jpg" class="m-avatar message__avatar" />
           <div class="message_content">
-            <span class="message__author">Best Friend</span>
-            <div class="message__buble">Congrats I love you!</div>
+            <span class="message__bubble">Congrats I love you!</span>
+            <span class="message__author">Jeongsik Kim</span>
           </div>
-          <span class="message_timestap"></span>
         </li>
-        <li class="incoming-message" message>
-          <span class="message_timestap"></span>
+        <li class="sent-message message">
           <div class="message_content">
-            <div class="message__buble">Thank you see you soon!</div>
+            <span class="message__bubble">
+              Thank you see you soon!
+            </span>
           </div>
+
+          <!-- </div> -->
+        </li>
+        <li class="incoming-message message">
+          <!-- <div class="message column"> -->
+          <!-- (이전에는 li 다음에 div 써서 column 나눴었음. 근데 이건 안나눔. 니콜라스 별 상관 없다함) -->
+          <img src="images/avatar.jpg" class="m-avatar message__avatar" />
+          <div class="message_content">
+            <span class="message__bubble">Congrats I love you!</span>
+            <span class="message__author">Jeongsik Kim</span>
+          </div>
+        </li>
+        <li class="sent-message message">
+          <div class="message_content">
+            <span class="message__bubble">
+              Thank you see you soon!
+            </span>
+          </div>
+
           <!-- </div> -->
         </li>
         <!-- class 2번째 message 넣은것은 이것도 메세지의 일부인데 공유하는 무언가가 있기 때문임(텍스트 스타일, 패딩, timestamp 같은 것들 | css 할떄 자세히 이해되겠지....) -->
       </ul>
     </main>
-    <div class="chat__write">
-      <div class="chat__write-column">
+    <div class="chat__write--container">
+      <input
+        type="text"
+        class="chat__write"
+        placeholder="Send message"
+        class="chat__write-input"
+      />
+      <div class="chat__icon-left chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__write-column">
-        <input
-          type="text"
-          placeholder="Send message"
-          class="chat__write-input"
-        />
+
+      <div class="chat__icon-right chat__icon">
         <!-- testarea 대신 input 사용, textarea는 좀 더 칸이 클때 사용하는 느낌? -->
-      </div>
-      <div class="chat__write-column">
+
         <span class="chat__write-icon"> <i class="far fa-smile-wink"></i> </span
         ><span class="chat__write-icon">
           <i class="fas fa-microphone"></i>
         </span>
       </div>
+    </div>
+    <div class="bigScreen">
+      <span class="bigScreen__text">Please make your screen small! 😱</span>
     </div>
   </body>
 </html>

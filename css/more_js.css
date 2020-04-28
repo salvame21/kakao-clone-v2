@@ -1,0 +1,61 @@
+/* 예습하면서 어려운 부분
+ 1. icon 위치 정렬하는 방법
+
+ */
+
+.more {
+  margin-top: 30px;
+}
+
+.more .more__btn-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-right: 52%;
+  margin-left: 25px;
+}
+
+.more .more__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more .more__btn-icon {
+  font-size: 13px;
+}
+.more .more__btn-title {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.more .more__suggestions {
+  margin-top: 30px;
+  border-top: 1px solid #f7f7f7;
+  padding-top: 15px;
+}
+
+.more .more__title {
+  font-size: 14px;
+}
+
+.more .more__suggestions-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 40%;
+  margin-left: 25px;
+}
+
+.more .more__suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestion .suggestion__title {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.5;
+}

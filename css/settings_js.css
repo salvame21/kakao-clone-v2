@@ -1,0 +1,32 @@
+.settings {
+  border-top: 1px solid #f7f7f7;
+  padding-top: 25px;
+}
+
+.settings .settings__setting {
+  margin-bottom: 20px;
+}
+
+.settings .settings__title {
+  margin-left: 10px;
+}
+
+.settings .settings__icon {
+  opacity: 0.7;
+}
+
+.settings .settings__title,
+.settings .settings__icon {
+  font-size: 20px;
+}
+
+/* 
+1. class 써주는거 .settings__setting .settings__icon 
+
+2. main class말고 section class 사용(section을 또 내용에 넣을 수 있으니까)
+
+3. last-child만 margin 안주기 :다음  띄어쓰기 하지 않기
+
+
+
+*/
